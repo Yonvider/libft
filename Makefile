@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jhuerta- <jhuerta-@student.42.fr>          +#+  +:+       +#+         #
+#    By: jorge <jorge@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/24 15:50:54 by jhuerta-          #+#    #+#              #
-#    Updated: 2023/10/18 18:15:44 by jhuerta-         ###   ########.fr        #
+#    Updated: 2023/11/23 20:30:06 by jorge            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,26 +55,26 @@ BONUS = ft_lstadd_back_bonus.c \
 		ft_lstnew_bonus.c \
 		ft_lstsize_bonus.c
 		
-OBJ = $(SRC:.c=.o)
-OBJ_BONUS = $(BONUS:.c=.o)
+OBJ = $(SRC:.c=.o) #para generar los .o de los .c de SCR
+OBJ_BONUS = $(BONUS:.c=.o) #para generar los .o de los .c de BONUS
 
 NAME = libft.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-RM = rm -f
-
-all: $(NAME)
+RM = rm -f #para borrar los .o
+#reglas
+all: $(NAME) #se ejecuta por defecto al hacer make
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ) #usa ar rcs para crear la libreria con los .o de SRC
 
 bonus: $(OBJ) $(OBJ_BONUS)
 	ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
 	
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@ #esta regla sirve para pasar los .c a .o con el compilador y los flags
 
 clean:
 	$(RM) $(OBJ) $(OBJ_BONUS)
@@ -82,6 +82,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean all
+re: fclean all #se usa para reconstruir el proyecto, borra todo y lo vuelve a crear
 
-.PHONY: all clean fclean re bonus name
+.PHONY: all clean fclean re bonus name #son los comandos que se pueden ejecutar con make

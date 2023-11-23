@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhuerta- <jhuerta-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jorge <jorge@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 16:32:12 by jhuerta-          #+#    #+#             */
-/*   Updated: 2023/10/05 17:15:44 by jhuerta-         ###   ########.fr       */
+/*   Updated: 2023/11/23 20:20:49 by jorge            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,10 @@ int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 
-typedef struct s_list
+typedef struct s_list //se usa para crear una lista enlazada
 {
-	void			*content;
-	struct s_list	*next;
+	void			*content; //apunta a cualquier tipo de dato
+	struct s_list	*next; //apunta al siguiente nodo
 }	t_list;
 
 t_list			*ft_lstnew(void *content);
@@ -70,4 +70,4 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 
-#endif
+#endif //marca el final del archivo

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhuerta- <jhuerta-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jorge <jorge@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 22:18:12 by jhuerta-          #+#    #+#             */
-/*   Updated: 2023/10/14 11:19:49 by jhuerta-         ###   ########.fr       */
+/*   Updated: 2023/11/20 23:27:56 by jorge            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,4 @@ int	ft_tolower(int c)
 		c = c + 32;
 	return (c);
 }
+/*se utiliza para pasar de mayuscula a minuscula*/

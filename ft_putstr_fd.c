@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhuerta- <jhuerta-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jorge <jorge@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:42:09 by jhuerta-          #+#    #+#             */
-/*   Updated: 2023/10/14 23:30:02 by jhuerta-         ###   ########.fr       */
+/*   Updated: 2023/11/20 23:24:14 by jorge            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s)
+	if (s) //verificamos que s no sea nulo	
 	{
-		while (*s)
-			write(fd, s++, 1);
+		while (*s) //mientras s no sea nulo
+			write(fd, s++, 1); //escribimos en el descriptor de archivos especifico, y aumentamos el puntero para recorrer la cadena
 	}
 }
+/*se usa para escribir una cadena de caracteres en un descriptor de archivos*/

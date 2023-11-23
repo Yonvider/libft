@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhuerta- <jhuerta-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jorge <jorge@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 22:13:11 by jhuerta-          #+#    #+#             */
-/*   Updated: 2023/10/14 11:18:56 by jhuerta-         ###   ########.fr       */
+/*   Updated: 2023/11/20 23:26:43 by jorge            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,4 @@ int	ft_toupper(int c)
 		c = c - 32;
 	return (c);
 }
+/*se utiliza para pasar de minuscula a mayuscula*/
